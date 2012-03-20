@@ -1,14 +1,14 @@
 from django.dispatch import receiver
-from better.emails.signals import confirmed
-from better.emails.models import Address
+from better_emails.signals import confirmed
+from better_emails.models import Address
 
 @receiver(confirmed, sender=None)
 def confirmed_handler(sender, operation, address, **kwargs):
     """
     * the user signs up
-    * better.emails is notified
+    * better_emails is notified
     * the user receives activation email
-    * click the link, activate the email, notify the better.auth
+    * click the link, activate the email, notify the better_auth app
     """
     if operation=='signup':
         Address.objects.activate_user(address)

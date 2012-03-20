@@ -17,13 +17,13 @@ AUTH_LOGOUT_REDIRECT_URL = getattr(settings,
 'AUTH_LOGOUT_REDIRECT_URL', "/")
 
 AUTH_PATCHER_OBJECT = getattr(settings,
-'AUTH_PATCHER', "better.auth.patches.UserPatch") 
+'AUTH_PATCHER', "better_auth.patches.UserPatch") 
 
 AUTH_URL_BUILDER_OBJECT = getattr(settings,
-'AUTH_URL_BUILDER', "better.auth.urls.UrlBuilder")
+'AUTH_URL_BUILDER', "better_auth.urls.UrlBuilder")
 
 AUTH_RECEIVERS_MODULE = getattr(settings,
-'AUTH_RECEIVERS', "better.auth.receivers")
+'AUTH_RECEIVERS', "better_auth.receivers")
 
 AUTH_FIELDS_MODULE = getattr(settings,
-'AUTH_FIELDS', "better.auth.fields")
+'AUTH_FIELDS', "better_auth.fields")
